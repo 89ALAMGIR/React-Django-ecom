@@ -1,4 +1,4 @@
 # React-Django-ecom
 <br>
-Author - Md Alamgir Hossain
+Author - Mohammad Alamgir Hossain
 <br>

@@ -1,5 +1,3 @@
-// 
-
 import { useEffect, useState } from 'react';
 import axios from 'axios'; // 1. Import axios at the top
 
@@ -11,7 +9,7 @@ function App() {
     axios.get('http://127.0.0.1:8000/api/')
       .then(response => {
         // Axios puts the backend data inside a '.data' object automatically
-        setMessage(response.data.message); 
+        setMessage(response.data.message); // here message is backend views.py ->return JsonResponse({"messag": "Hello from Django!"})
       })
       .catch(error => {
         console.error('Error connecting to the backend:', error);

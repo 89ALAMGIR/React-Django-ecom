@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900">
-      <h1 className="text-3xl font-bold underline p-4">Product List</h1>
+      <h1 className="text-3xl font-bold underline p-4">Product List </h1>
       <div className="container mx-auto p-4">
         {products.map((product) => (
           <div key={product.id} className="bg-white p-4 rounded shadow mb-4">

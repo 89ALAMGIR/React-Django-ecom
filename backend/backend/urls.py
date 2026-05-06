@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('store.urls')), # Connects the store app URLs
+    path('api/', include('store.urls')), # Connects the store app URLs
 ]

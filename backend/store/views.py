@@ -1,8 +1,16 @@
-from django.shortcuts import render
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from .models import Product, Category
+from .serializers import CategorySerializer, ProductSerializer
 
-from django.http import JsonResponse
+@api_view(['GET'])
+def get_products(request):
+    products = Product.objects.all()
+    serializer = ProductSerializer(products, many=True)
+    return Response(serializer.data)
 
-# This function sends a message back to React
-def api_view(request):
-    return JsonResponse({"message": "Hello from Django!"})
-
+@api_view(['GET'])
+def get_categories(request):
+    categories = Category.objects.all()
+    serializer = CategorySerializer(categories, many=True)
+    return Response(serializer.data)

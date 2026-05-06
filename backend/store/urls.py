@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import api_view
+from . import views
 
 urlpatterns = [
-    path('api/', api_view), # This makes the URL http://127.0.0
+    path('products/', views.get_products),   # Add / here
+    path('categories/', views.get_categories), # Add / here
 ]
